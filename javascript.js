@@ -30,10 +30,4 @@ dots.forEach((dot, i) => {
   });
 });
 
-// Auto-slide every 6 seconds
-setInterval(() => {
-  index = (index + 1) % testimonials.length;
-  updateCarousel();
-}, 6000);
-
 updateCarousel();
