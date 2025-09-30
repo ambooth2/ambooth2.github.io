@@ -232,7 +232,7 @@ footer nav a:hover {
 
 #testimonialhero {
   height: 500px;
-  background-image: url('DB_Bench.jpg');
+  background-image: url('Dessert.jpg');
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
@@ -325,7 +325,6 @@ input[type="submit"]:hover {
   background: linear-gradient(45deg, #AF2D93, #5B2C6F);
 }
 
-
 .logo-right{
   display: none;
 }
@@ -406,6 +405,62 @@ input[type="submit"]:hover {
   background: linear-gradient(45deg, #AF2D93, #FF5C33);
 }
 
+.about-section {
+  max-width: 1000px;
+  margin: 3em auto;
+  padding: 2em;
+}
+
+.about-grid {
+  max-width: 1300px;
+  margin: 3em auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "top1 top2 top3 top4"
+    "mid1 text text mid2"
+    "bottom1 bottom2 bottom3 bottom4";
+  gap: 16px;
+  align-items: center;
+}
+
+.about-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.top1    { grid-area: top1; }
+.top2    { grid-area: top2; }
+.top3    { grid-area: top3; }
+.top4    { grid-area: top4; }
+
+.mid1    { grid-area: mid1; }
+.mid2    { grid-area: mid2; }
+
+.bottom1 { grid-area: bottom1; }
+.bottom2 { grid-area: bottom2; }
+.bottom3 { grid-area: bottom3; }
+.bottom4 { grid-area: bottom4; }
+
+.about-text {
+  grid-area: text;
+  background: rgba(26,26,26,0.95);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  line-height: 1.6;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #5B2C6F, #AF2D93, #FF5C33) 1;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
 @media (min-width: 320px){
   header {
     display: grid;
@@ -471,6 +526,26 @@ input[type="submit"]:hover {
     flex: 1;
     margin: 0.5em;
   }
+
+  .about-grid {
+    grid-auto-rows: auto;
+    gap: 12px;
+  }
+
+  .about-text {
+    order: -1;
+    width: 98%;
+    justify-self: start;
+    
+  }
+
+  .about-section {
+    padding: 1.5em;
+  }
+
+  .about-section img {
+    width: 180px;
+  }
 }
 
 @media (min-width: 1024px){
@@ -480,6 +555,11 @@ input[type="submit"]:hover {
     width: 200px;
     height: auto;
     margin-right: 1em;
+  }
+
+  .about-text {
+    width: 89%;
+    justify-self: start;
   }
   
   header h1{
