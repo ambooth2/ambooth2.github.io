@@ -217,7 +217,7 @@ footer nav a:hover {
   height: 500px;
   background-image: url('stretching.jpg');
   background-size: cover;
-  background-position: center 80%;
+  background-position: center 70%;
   background-repeat: no-repeat;
 }
 
@@ -627,4 +627,5 @@ input[type="submit"]:hover {
   }
 
 }
+
 
