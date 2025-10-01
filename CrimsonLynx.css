@@ -215,7 +215,7 @@ footer nav a:hover {
 
 #homehero {
   height: 500px;
-  background-image: url('Bench.jpg');
+  background-image: url('stretching.jpg');
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
@@ -625,4 +625,5 @@ input[type="submit"]:hover {
       grid-area: footer;
     }
   }
+
 }
