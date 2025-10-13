@@ -528,6 +528,22 @@ input[type="submit"]:hover {
     text-align: center;
   }
 
+   footer nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    border: none;
+  }
+
+  footer nav a {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1em;
+  }
+
   section {
     margin-left: 2em;
     margin-right: 2em;
@@ -671,6 +687,7 @@ input[type="submit"]:hover {
   }
 
 }
+
 
 
 
