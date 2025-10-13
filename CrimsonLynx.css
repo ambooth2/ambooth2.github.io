@@ -500,6 +500,16 @@ input[type="submit"]:hover {
     gap: 1em;
   }
 
+   .about-section {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  .about-section img,
+  .about-section .about-text {
+    flex-shrink: 0; 
+  }
+
   label {
     text-align: left;
   }
@@ -606,6 +616,7 @@ input[type="submit"]:hover {
   }
 
 }
+
 
 
 
