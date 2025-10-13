@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q6WV8C5R2"></script>
@@ -11,7 +10,7 @@
 
         gtag('config', 'G-5Q6WV8C5R2');
     </script>
-    <title> Crimson Lynx Personal Training </title>
+    <title>Crimson Lynx Personal Training</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,19 +23,16 @@
 
     <link rel="stylesheet" href="CrimsonLynx.css">
 </head>
-
 <body>
-    <div id = "wrapper">
+    <div id="wrapper">
 
         <header>
             <div id="logo">
                 <img src="Finished_Logo.svg" alt="Crimson Lynx Logo">
             </div>
-            
             <div>
                 <h1><a href="index.html">Crimson Lynx Personal Training</a></h1>
             </div>
-
             <div>
                 <img class="logo-right" src="Finished_Logo.svg" alt="Crimson Lynx Logo">
             </div>
@@ -48,21 +44,26 @@
                 <li><a href ="About_Me.html">About Me</a></li>
                 <li><a href ="Services.html">Services </a></li>
                 <li><a href ="Testimonials.html">Testimonials </a></li>
-                <li><a href ="Contact.html">Contact</a></li>
+                <li><a href ="Contact.php">Contact</a></li>
             </ul>
         </nav>
-    
-        <div id = "indexhero" class="hero"></div>
+
+        <div id="homehero" class="hero"></div>
 
         <main>
             <section class="intro">
                 <h2>Contact Us!</h2>
                 <p>Please fill out the form below to get in touch with us. We look forward to hearing from you!</p>
             </section>
-            
+
             <section class="contact-form">
-                <h2>Contact Us</h2>
-                <form action="#" method="post">
+                <div id="form-message" style="text-align:center; font-weight:bold; margin-bottom: 1em;"></div>
+
+                <form id="contactForm" action="https://formsubmit.co/crimsonlynxpersonaltraining@gmail.com" method="POST">
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://www.crimsonlynxpersonaltraining.com/Contact.html">
+
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -77,22 +78,33 @@
 
                     <input type="submit" value="Submit">
                 </form>
-            </section>
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const form = document.getElementById('contactForm');
+                    const messageDiv = document.getElementById('form-message');
 
+                    form.addEventListener('submit', function() {
+                        messageDiv.style.color = '#00FF00';
+                        messageDiv.textContent = 'Thank you! Your message has been sent.';
+                    });
+                });
+                </script>
+            </section>
         </main>
     </div>
-        <footer>
-            <nav>
-                <ul>
-                    <li><a href ="index.html">Home </a></li>
-                    <li><a href ="About_Me.html">About Me</a></li>
-                    <li><a href ="Services.html">Services </a></li>
-                    <li><a href ="Testimonials.html">Testimonials </a></li>
-                    <li><a href ="Contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            Copyright &copy; 2025 Crimson Lynx Personal Training LLC All Rights Reserved<br>
-            <a href="mailto:crimsonlynxpersonaltraining@gmail.com">crimsonlynxpersonaltraining@gmail.com</a>
-        </footer>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href ="index.html">Home </a></li>
+                <li><a href ="About_Me.html">About Me</a></li>
+                <li><a href ="Services.html">Services </a></li>
+                <li><a href ="Testimonials.html">Testimonials </a></li>
+                <li><a href ="Contact.php">Contact</a></li>
+            </ul>
+        </nav>
+        Copyright &copy; 2025 Crimson Lynx Personal Training LLC All Rights Reserved<br>
+        <a href="mailto:crimsonlynxpersonaltraining@gmail.com">crimsonlynxpersonaltraining@gmail.com</a>
+    </footer>
 </body>
 </html>
