@@ -324,10 +324,6 @@ input[type="submit"]:hover {
   background: linear-gradient(45deg, #AF2D93, #5B2C6F);
 }
 
-.logo-right{
-  display: none;
-}
-
 .testimonial-slider {
   display: flex;
   overflow-x: auto;
@@ -472,6 +468,10 @@ input[type="submit"]:hover {
     width: 150px;
     height: auto;
   }
+  
+  .logo-right{
+    display: none;
+  }
 
   nav ul {
     flex-wrap: wrap;
@@ -580,10 +580,6 @@ input[type="submit"]:hover {
 @media (min-width: 1024px){
   .logo-right{
     display: block;
-    justify-self: end;
-    width: 200px;
-    height: auto;
-    margin-right: 1em;
   }
 
   .about-text {
@@ -657,6 +653,7 @@ input[type="submit"]:hover {
   }
 
 }
+
 
 
 
