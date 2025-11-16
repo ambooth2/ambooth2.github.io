@@ -456,10 +456,10 @@ input[type="submit"]:hover {
   border-spacing: 0;
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 768px){
   header {
     grid-template-columns: 1fr;
+    align-items: center;
     text-align: center;
   }
 
@@ -468,27 +468,17 @@ input[type="submit"]:hover {
     width: 150px;
     height: auto;
   }
-  
-  .logo-right{
-    display: none;
+
+  #content-grid {
+    grid-template-columns: 1fr;
   }
 
-  nav ul {
-    flex-wrap: wrap;
-    gap: 1em;
+  .content-box ul{
+    list-style: none;
+    text-align: center;
   }
 
-  form {
-    width: 90%;
-    max-width: 400px;
-    margin: 1.5em auto;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-
-   #homehero {
+  #homehero {
     height: 300px;
   }
 
@@ -497,38 +487,31 @@ input[type="submit"]:hover {
     background-position: center 60%;
   }
 
-   .about-section {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; 
+  form{
+    width: 60%;
+    max-width: 30em;
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-gap: 1em;
   }
 
-  .about-section img,
-  .about-section .about-text {
-    flex-shrink: 0; 
-  }
-
-  label {
-    text-align: left;
-  }
-
-  input, textarea {
-    font-size: 1rem;
-    width: 100%;
+  .logo-right{
+  display: none;
   }
 
   input[type="submit"] {
-    width: 100%;
-    padding: 0.8em;
-  }
-  
-  #content-grid {
-    grid-template-columns: 1fr;
-    padding: 1em;
+    grid-column: 2;
+    width: 9em;
   }
 
-  footer nav ul {
-    flex-wrap: wrap;
-    gap: 1em;
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  nav li {
+    border-bottom: none;
   }
 
   section {
@@ -565,21 +548,15 @@ input[type="submit"]:hover {
   .about-section img {
     width: 180px;
   }
-
-  #content-grid {
-    grid-template-columns: 1fr; 
-  }
-
-  #homehero, #serviceshero, #testimonialhero, #contacthero {
-    height: 220px;
-  }
 }
-}
-
 
 @media (min-width: 1024px){
   .logo-right{
     display: block;
+    justify-self: end;
+    width: 200px;
+    height: auto;
+    margin-right: 1em;
   }
 
   .about-text {
@@ -589,6 +566,9 @@ input[type="submit"]:hover {
   
   header h1{
     font-size: 300%;
+  }
+  .logo-right{
+    display: block;
   }
 
   #content-grid {
@@ -651,17 +631,4 @@ input[type="submit"]:hover {
       grid-area: footer;
     }
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
